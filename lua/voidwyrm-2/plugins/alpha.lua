@@ -28,6 +28,7 @@ return {
 			"   x@@@@                   @@@@c      +@@@@@s          @@@@V      -@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@r     +@@@@@I          @@@@4            ",
 			"   @@@@Y                  L@@@@       @@@@@-           @@@@`      n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@,           @@@@`            ",
 		}
+-- 34 x 18
 
 		dashboard.section.buttons.val = {
 			dashboard.button("f", "  > Find File", ":Telescope find_files<CR>"),
