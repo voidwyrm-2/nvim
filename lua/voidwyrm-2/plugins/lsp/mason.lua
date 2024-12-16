@@ -11,6 +11,13 @@ return {
         -- enable mason
         mason.setup()
 
+        local function getTSServer()
+            if vim.fn.has('macunix') then
+                return "ts_ls"
+            end
+            return "tsserver"
+        end
+
         mason_lspconfig.setup({
             -- list of servers for mason to install
             ensure_installed = {
@@ -23,7 +30,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tailwindcss",
-                "ts_ls",
+                getTSServer(),
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
