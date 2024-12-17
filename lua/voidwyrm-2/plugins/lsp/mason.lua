@@ -12,7 +12,8 @@ return {
         mason.setup()
 
         local function getTSServer()
-            if vim.fn.has('macunix') then
+            --print(vim.fn.has("macunix"), vim.loop.os_uname().sysname == "Darwin")
+            if jit.os == "OSX" then
                 return "ts_ls"
             end
             return "tsserver"
