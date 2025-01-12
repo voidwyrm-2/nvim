@@ -24,7 +24,7 @@ opt.number = true         -- shows absolute line number on cursor line (when rel
 
 -- tabs & indentation
 opt.tabstop = 4       -- 4 spaces for tabs (prettier default)
-opt.shiftwidth = 4    -- 4 spaces for indent width
+opt.shiftwidth = 2    -- 2 spaces for indent width
 opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -64,7 +64,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 if os.getenv("HOME") ~= nil then
-    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+  vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
 
 vim.opt.undofile = true
@@ -73,9 +73,9 @@ vim.opt.undofile = true
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = "*",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
 })
