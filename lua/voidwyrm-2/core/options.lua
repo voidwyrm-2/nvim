@@ -24,7 +24,7 @@ opt.number = true         -- shows absolute line number on cursor line (when rel
 
 -- tabs & indentation
 opt.tabstop = 4       -- 4 spaces for tabs (prettier default)
-opt.shiftwidth = 4    -- 4 spaces for indent width
+opt.shiftwidth = 2    -- 4 spaces for indent width
 opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
