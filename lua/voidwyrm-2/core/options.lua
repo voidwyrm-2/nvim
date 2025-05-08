@@ -24,7 +24,7 @@ opt.number = true         -- shows absolute line number on cursor line (when rel
 
 -- tabs & indentation
 opt.tabstop = 4       -- 4 spaces for tabs (prettier default)
-opt.shiftwidth = 2    -- 2 spaces for indent width
+opt.shiftwidth = 4    -- 4 spaces for indent width
 opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -79,3 +79,25 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   group = highlight_group,
   pattern = "*",
 })
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+})
+
+---@param assots table
+local function add_filetype_assots(assots)
+  for _, v in pairs(assots) do
+    vim.filetype.add {
+      extension = {
+        [v[1]] = v[2]
+      }
+    }
+  end
+end
+
+add_filetype_assots {
+  { "h", "c" },
+  { "c", "c" }
+}

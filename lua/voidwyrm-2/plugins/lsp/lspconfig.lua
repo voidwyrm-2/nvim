@@ -182,5 +182,7 @@ return {
         lspconfig.taplo.setup {}
 
         lspconfig.nim_langserver.setup {}
+
+        lspconfig.clangd.setup {}
     end
 }
