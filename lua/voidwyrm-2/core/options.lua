@@ -64,7 +64,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 if os.getenv("HOME") ~= nil then
-  vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 end
 
 vim.opt.undofile = true
@@ -73,31 +73,31 @@ vim.opt.undofile = true
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = "*",
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = "*",
 })
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
+    virtual_text = true,
+    signs = true,
+    underline = true,
 })
 
 ---@param assots table
 local function add_filetype_assots(assots)
-  for _, v in pairs(assots) do
-    vim.filetype.add {
-      extension = {
-        [v[1]] = v[2]
-      }
-    }
-  end
+    for _, v in pairs(assots) do
+        vim.filetype.add {
+            extension = {
+                [v[1]] = v[2]
+            }
+        }
+    end
 end
 
 add_filetype_assots {
-  { "h", "c" },
-  { "c", "c" }
+    { "h", "c" },
+    { "c", "c" }
 }
