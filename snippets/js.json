@@ -1,0 +1,10 @@
+{
+    "functemp": {
+        "prefix": "function()",
+        "body": [
+            "function $1() {",
+            "",
+            "}"
+        ]
+    }
+}

@@ -2,7 +2,8 @@
     "ifnotnil": {
         "prefix": "ifn",
         "body": [
-            "if $1 != nil {",
+            "if err != nil {",
+            "\treturn $1",
             "}"
         ]
     }

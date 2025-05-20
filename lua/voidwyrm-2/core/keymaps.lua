@@ -33,6 +33,8 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make split windows equal width & height" })
 keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close current split window" })
 
+keymap.set("n", ":jk", ":q!", { silent = false, desc = "Funny and more ergonomic q!" })
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
