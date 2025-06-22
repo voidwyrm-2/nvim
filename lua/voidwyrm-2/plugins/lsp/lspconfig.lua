@@ -162,27 +162,66 @@ return {
             },
         }
 
-        lspconfig.pyright.setup {}
+        lspconfig.pyright.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.ols.setup {}
+        lspconfig.ols.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.zls.setup {}
+        lspconfig.zls.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.omnisharp.setup {}
+        lspconfig.omnisharp.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.kotlin_language_server.setup {}
+        lspconfig.kotlin_language_server.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.solargraph.setup {}
+        lspconfig.solargraph.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.marksman.setup {}
+        lspconfig.marksman.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
         --lspconfig.vale_ls.setup{}
 
-        lspconfig.jsonls.setup {}
+        lspconfig.jsonls.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.taplo.setup {}
+        lspconfig.taplo.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
 
-        lspconfig.nim_langserver.setup {}
+        lspconfig.nim_langserver.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                nim = {
+                    checkOnSave = true,
+                    logNimsuggest = false
+                }
+            },
+        }
 
-        lspconfig.clangd.setup {}
+        lspconfig.clangd.setup {
+            capabilities = capabilities,
+            on_attach = on_attach,
+        }
     end
 }

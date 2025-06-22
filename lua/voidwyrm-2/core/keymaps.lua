@@ -4,6 +4,11 @@ local keymap = vim.keymap
 -- General Keymaps
 ---------------------
 
+keymap.set({ "n", "v" }, "h", "<Left>", { silent = true })
+keymap.set({ "n", "v" }, "j", "<Right>", { silent = true })
+keymap.set({ "n", "v" }, "k", "<Up>", { silent = true })
+keymap.set({ "n", "v" }, "l", "<Down>", { silent = true })
+
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 keymap.set({ "n", "v", "i" }, "<C-z>", "<Nop>", { silent = true })
 
