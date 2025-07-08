@@ -4,13 +4,18 @@ local keymap = vim.keymap
 -- General Keymaps
 ---------------------
 
-keymap.set({ "n", "v" }, "h", "<Left>", { silent = true })
-keymap.set({ "n", "v" }, "j", "<Right>", { silent = true })
-keymap.set({ "n", "v" }, "k", "<Up>", { silent = true })
-keymap.set({ "n", "v" }, "l", "<Down>", { silent = true })
+keymap.set({ "n", "v" }, "h", "<Nop>", { silent = true })
+keymap.set({ "n", "v" }, "j", "<Nop>", { silent = true })
+keymap.set({ "n", "v" }, "k", "<Left>", { silent = true })
+keymap.set({ "n", "v" }, "l", "<Up>", { silent = true })
+keymap.set({ "n", "v" }, ";", "<Down>", { silent = true })
+keymap.set({ "n", "v" }, "'", "<Right>", { silent = true })
 
 keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 keymap.set({ "n", "v", "i" }, "<C-z>", "<Nop>", { silent = true })
+
+keymap.set("n", "e", "w", { silent = true })
+keymap.set("n", "w", "b", { silent = true })
 
 keymap.set("n", "<leader>w", ":w!<CR>", { silent = true, desc = "Fast saving." })
 
@@ -58,6 +63,7 @@ keymap.set("n", "<leader>td", ":Gitsigns toggle_deleted<CR>", { desc = "Toggle d
 
 -- oil
 keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
+
 
 -- trouble
 keymap.set("n", "<leader>xx", function()
