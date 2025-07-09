@@ -5,12 +5,12 @@ return {
         -- import mason plugin safely
         local mason = require("mason")
 
-        -- import mason-lspconfig plugin safely
-        local mason_lspconfig = require("mason-lspconfig")
-
         -- enable mason
         mason.setup()
 
+        -- see:
+        -- https://vi.stackexchange.com/questions/46856/neovim-duplicate-lsp-clients-attached-to-the-buffer
+        --[[
         local function getTSServer()
             --print(vim.fn.has("macunix"), vim.loop.os_uname().sysname == "Darwin")
             if jit.os == "OSX" then
@@ -19,11 +19,10 @@ return {
             return "tsserver"
         end
 
-        mason_lspconfig.setup({
+       require("mason-lspconfig").setup {
             -- list of servers for mason to install
             ensure_installed = {
                 "cssls",
-                "elixirls",
                 "emmet_ls",
                 "gopls",
                 "graphql",
@@ -31,10 +30,14 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tailwindcss",
+                "ruff",
+                "pyright",
+                "nim_langserver",
                 getTSServer(),
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
-        })
+        }
+        ]]
     end,
 }

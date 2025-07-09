@@ -42,28 +42,6 @@ return {
             on_attach = on_attach,
         })
 
-        local elixir = require("elixir")
-        local elixirls = require("elixir.elixirls")
-
-        elixir.setup({
-            capabilities = capabilities,
-            -- nextls = { enable = true },
-            credo = {},
-            elixirls = {
-                enable = true,
-                settings = elixirls.settings({
-                    dialyzerEnabled = false,
-                    enableTestLenses = false,
-                }),
-                on_attach = on_attach,
-            },
-        })
-
-        -- lspconfig["elixirls"].setup({
-        -- 	capabilities = capabilities,
-        -- 	on_attach = on_attach,
-        -- })
-
         lspconfig["emmet_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
