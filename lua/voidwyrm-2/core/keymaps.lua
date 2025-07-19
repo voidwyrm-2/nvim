@@ -1,5 +1,9 @@
 local keymap = vim.keymap
 
+-- useful built-in keybinds
+-- <C-a> increment number
+-- <C-x> decrement number
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -34,8 +38,9 @@ keymap.set({ "n", "v", "i" }, "<A-Down>", ":m .+1<CR>==", { desc = "Moving line 
 keymap.set({ "n", "v", "i" }, "<A-up>", ":m .-2<CR>==", { desc = "Moving line down.", silent = true })
 
 -- keep cursor in the middle of the screen when using <C-d> & <C-u>
-vim.keymap.set("n", "<C-f>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-f>", "<C-u>zz")
+vim.keymap.set("n", "<C-u>", "<Nop>")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
