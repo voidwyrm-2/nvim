@@ -25,7 +25,7 @@ keymap.set("n", "<leader>w", ":w!<CR>", { silent = true, desc = "Fast saving." }
 
 keymap.set({ "n", "v" }, "<leader>pp", "<C-^>", { desc = "Return to previously edited buffer." })
 
-keymap.set({ "n", "v" }, "<S-U>", "<C-R>", { desc = "More intuitive redo" })
+keymap.set({ "n" }, "<S-U>", "<C-R>", { desc = "More intuitive redo" })
 
 keymap.set("n", "<leader>rs", ":LspRestart<CR>", { desc = "Restart lsp server." })
 

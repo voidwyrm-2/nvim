@@ -201,5 +201,7 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         }
+
+        lspconfig["elp"].setup {}
     end
 }
